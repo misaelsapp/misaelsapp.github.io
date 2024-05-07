@@ -1,5 +1,5 @@
 var ishamburgermenu = false;
-
+const currentYear = new Date().getFullYear();
 function visit(url, param, blank) {
     if (param == null) {
         if (!blank) {
@@ -44,6 +44,8 @@ $(document).ready(function () {
         });
         waypoints.push(waypoint)
     });
+
+    $("#curyear").text(currentYear)
 
 
 });
