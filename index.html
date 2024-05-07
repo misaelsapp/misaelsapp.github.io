@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
+    <meta property="og:title" content="Misael's App" />
+    <meta property="og:description" content="Software Developer" />
+    <meta property="og:type" content="Application" />
+    <meta property="og:url" content="http://misaelsapp.github.io/" />
+    <meta property="og:image" content="https://misaelsapp.github.io/img/cover.jpg" />
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Software Developer">
+    <meta name="keywords"
+        content="Cleanzone, The Lost Village, Invasion, Apocalyptic Survivor, Mav Anti-Malware, Image Converter, Antivirus, Game, Android, Windows">
+    <meta name="author" content="misael">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Misael's App</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/waypoints.min.js"></script>
+</head>
+
+
+<body>
+    <header id="headerNav">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo">
+                </div>
+                <ul class="nav-links">
+                    <li onclick="hamburgermenu()" id="navicon"></li>
+                    <li onclick="scrollToElement('product')"><a href="#Product">PRODUCT</a></li>
+                    <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="billboard">
+        <div class="container">
+            <div style="flex: 1;">
+                <div class="billboard-title">Misael's App</div>
+                <div class="billboard-desc">We are a software development company specializing in the fields of
+                    security and game development. We are dedicated to providing cutting-edge solutions that prioritize
+                    both
+                    the safety of digital systems and the immersive experiences of gaming enthusiasts.
+                </div>
+                <div class="billboard-button">
+                    <button class="button-blue" style="margin-top: 20px;width: 135px;" onclick="scrollToElement('product')">Our Products</button>
+                </div>
+            </div>
+            <div class="billboard-mascot" style="flex: 1;">
+                <img src="img/mascot.png" width="450">
+            </div>
+        </div>
+    </div>
+
+    <div class="waypoint" id="product">
+        <ul class="flex-container">
+
+
+            <li class="flex-item">
+                <div class="thumbnail" style="background-image: url('img/qsier.png')"> </div>
+                <div class="desc">
+                    <h2>QSIER</h2>
+                    <div>
+                        Increase your business productivity with Qsier. Leading Cashier Solution for a Successful Business!
+                    </div>
+                    <button class="button-blue" onclick="visit('apps/qsier.apk',null,true)">Download</button>
+                </div>
+            </li>
+
+            <li class="flex-item">
+                <div class="thumbnail" style="background-image: url('img/thumb/.png')"> </div>
+                <div class="desc">
+                    <h2>The Cursed Village</h2>
+                    <div>
+                        This survival game that combines elements of RPG, shooting and action games.
+                    </div>
+                    <button class="button-red" onclick="visit('',null,true)">Coming Soon</button>
+
+                </div>
+            </li>
+
+            <li class="flex-item">
+                <div class="thumbnail" style="background-image: url('img/thumb/.png')"> </div>
+                <div class="desc">
+                    <h2>Mobilesafe Defender</h2>
+                    <div>
+                        Stay Secure Every Step. Mobilesafe Defender, Your Ultimate Protection at Your Fingertips
+                    </div>
+                    <button class="button-red" onclick="visit('',null,true)">Coming Soon</button>
+
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    <div class="container">
+        <div id="founder">
+            <div id="photo"></div>
+            <div id="quot">
+                <div>
+                    <div>
+                        Software acts as the key that unlocks the vast realms of knowledge and understanding,
+                        illuminating the unexplored territories of our world and beyond.
+                    </div>
+                    <div style="margin-top: 40px;">
+                        MISAEL
+                    </div>
+                    <div>
+                        Software Developer <br>& Digital Artist
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+<footer class="font-white-color"
+    style="font-size: 14px;background-color: #000;line-height: 1.6;text-align: center;padding: 10px">
+    Copyright &copy; 2023 DigitalDreams Interactive. All Right Reserved.
+</footer>
+
+
+</html>
