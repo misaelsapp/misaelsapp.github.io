@@ -8,6 +8,9 @@
     src: url("../font/Dosis.ttf") format("truetype");
 }
 
+a{
+    color: #fff;
+}
 .font-green-color {
     color: #A7CF45
 }
@@ -401,7 +404,12 @@ nav {
 }
 
 
-
+.title{
+    padding: 20px;
+    text-align: center;
+    background-color: #2976aa;
+    color: #ffffff;
+}
 @media (max-width: 480px) {
 
     #founder {
