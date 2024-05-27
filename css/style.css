@@ -8,6 +8,7 @@
     src: url("../font/Dosis.ttf") format("truetype");
 }
 
+
 a{
     color: #fff;
 }
@@ -123,7 +124,6 @@ nav {
 
 .logo img {
     height: 40px;
-    margin-right: 20px;
 }
 
 .nav-links {
@@ -136,11 +136,12 @@ nav {
 }
 
 .nav-links li {
-    margin-right: 15px;
+    margin-right: 30px;
 }
 
 .nav-links li a {
-    color: #fff;
+    color: #cccccc;
+    font-weight: bold;
     text-decoration: none;
 }
 
