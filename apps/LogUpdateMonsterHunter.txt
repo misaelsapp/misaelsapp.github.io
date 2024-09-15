@@ -1,6 +1,8 @@
 Update 1.8<size=16>
 + Added New Skills
-+ Minor Improvements
++ Fixed Bugs in GetHit Animation
++ Fixed Bugs in Text Scrolling
++ Added Panel Log Update
 </size>
 
 Update 1.7<size=16>
