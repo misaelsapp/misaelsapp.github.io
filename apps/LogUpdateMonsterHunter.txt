@@ -1,19 +1,21 @@
-Update 1.8
-<size=16>
-+ New Skills
-+ Small Improvement
+Update 1.8<size=16>
++ Added New Skills
++ Minor Improvements
 </size>
 
-Update 1.7
-<size=16>
-+ Improvement UI
+Update 1.7<size=16>
++ UI Enhancements
 </size>
 
-Update 1.6
-<size=16>
-+ New weapons and effects added
-+ New map and monsters added
-+ Shop price adjustments
-+ Bug fixes on item drops
-+ Bug fixes on damage calculations
+Update 1.6<size=16>
++ Added New Weapons and Effects
++ Added New Map and Monsters
++ Shop Price Adjustments
++ Fixed Bugs in Item Drops
++ Fixed Bugs in Damage Calculations
 </size>
+
+Thank you for your continued support and feedback. Stay tuned for more updates!
+
+Best regards,  
+Misael
