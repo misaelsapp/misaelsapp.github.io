@@ -1,3 +1,7 @@
+Update 1.9<size=16>
++ Fixed Bugs
+</size>
+
 Update 1.8<size=16>
 + Added New Skills
 + Fixed Bugs in GetHit Animation
