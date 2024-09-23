@@ -1,3 +1,11 @@
+Update 1.10<size=16>
++ Added a day-night cycle system.
++ Introduced jump and dodge features for the character to avoid enemies.
++ Redesigned NPCs and the Drone, along with adding new NPCs.
++ Fixed animation bugs.
++ Improved graphics settings, now divided into four levels: Low, Medium, High, and Ultra.
+</size>
+
 Update 1.9<size=16>
 + Fixed Bugs
 </size>
@@ -25,3 +33,4 @@ Thank you for your continued support and feedback. Stay tuned for more updates!
 
 Best regards,  
 Misael
+
