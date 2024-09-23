@@ -1,3 +1,11 @@
+Update 1.11<size=16>
++ Expanded support to include ARMv7 alongside ARM64.
++ Implemented Post Processing.
++ Added new items to the Crafting Manager.
++ Added hit effects on enemies.
++ Improved drone animations.
+</size>
+
 Update 1.10<size=16>
 + Added a day-night cycle system.
 + Introduced jump and dodge features for the character to avoid enemies.
