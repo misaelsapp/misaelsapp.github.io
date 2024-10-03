@@ -1,4 +1,13 @@
-Update 1.11<size=16>
+<color=#FF6666>Update 1.12</color><size=16>
++ Added building system and new crafting system.
++ Redesigned Trees and Harbor.
++ Added hunger and thirst stats.
++ Added tree-cutting system.
++ Added new items to the crafting manager.
++ Added ambient sound.
+</size>
+
+<color=#66FF66>Update 1.11<size=16>
 + Expanded support to include ARMv7 alongside ARM64.
 + Implemented Post Processing.
 + Added new items to the Crafting Manager.
@@ -40,5 +49,5 @@ Update 1.6<size=16>
 Thank you for your continued support and feedback. Stay tuned for more updates!
 
 Best regards,  
-Misael
+Misael</color>
 
