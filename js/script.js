@@ -1,5 +1,8 @@
 var ishamburgermenu = false;
 const currentYear = new Date().getFullYear();
+
+var linknavColor="#E74C3C";
+
 function visit(url, param, blank) {
     if (param == null) {
         if (!blank) {
@@ -47,22 +50,45 @@ $(document).ready(function () {
 
     $("#curyear").text(currentYear)
 
-
+    $(".nav-links li a").hover(
+        function() {
+            // Mouse enter: Change background color
+            $(this).css("color", "#E74C3C");
+        }, 
+        function() {
+            // Mouse leave: Reset background color
+            $(this).css("color", linknavColor);
+        }
+    );
 });
+
 
 
 $(window).scroll(function () {
     var headerNav = $("#headerNav");
+    var linkNav = $(".nav-links li a ");
     var scrollTop = $(window).scrollTop();
-
     if (scrollTop > 0) {
-        headerNav.css("position","fixed");
+        headerNav.css({
+            "position": "fixed",
+            "top": "0",
+            "background-color": "#333"
+        });
+        linknavColor = "#cccccc";
+        linkNav.css({
+            "color": linknavColor
+        })
     } else {
-       
-        headerNav.css("position","relative");
+        headerNav.css({
+            "position": "relative",
+            "background-color": "transparent"
+        });
+        linknavColor = "#333";
+        linkNav.css({
+            "color": linknavColor
+        })
     }
 });
-
 
 function hamburgermenu(){
     var el_nav = $(".nav-links > li:not(:first-child)");
@@ -92,6 +118,9 @@ function hamburgermenu(){
         });
     }
 }
+
+
+
 function scrollToElement(el) {
 
     if(ismobile()){
@@ -100,16 +129,13 @@ function scrollToElement(el) {
         ishamburgermenu = false
     }
 
+
     $("html, body").animate({
-        scrollTop: $("#" + el).position().top - 80
+        scrollTop: $("#" + el).offset().top - 80
     }, {
         duration: 500,
-        complete: function () {
-
-           
-
-        }
-    })
+        easing: "swing" 
+    });
 }
 
 

@@ -1,13 +1,17 @@
-@font-face {
-    font-family: "conthrax";
-    src: url("../font/conthrax.ttf") format("truetype");
-}
 
 @font-face {
-    font-family: "dosis";
-    src: url("../font/Dosis.ttf") format("truetype");
+    font-family: "afacadflux";
+    src: url("../font/afacadflux.ttf") format("truetype");
 }
 
+footer{
+    font-size: 14px;
+    background-color: #000;
+    line-height: 1.6;
+    text-align: center;
+    padding: 10px;
+    
+}
 
 a{
     color: #fff;
@@ -63,12 +67,12 @@ a{
 
 
 .font-small {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold
 }
 
 .font-middle {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold
 }
 
@@ -83,8 +87,9 @@ a{
 }
 
 html {
-    font-family: dosis;
+    font-family: afacadflux;
     background-color: #ccc;
+    font-size: 16px;
 }
 
 * {
@@ -109,7 +114,7 @@ header {
     width: 100%;
     height: 60px;
     left: 0;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 nav {
@@ -135,12 +140,13 @@ nav {
 
 }
 
+
 .nav-links li {
     margin-right: 30px;
 }
 
 .nav-links li a {
-    color: #cccccc;
+    color: #333333;
     font-weight: bold;
     text-decoration: none;
 }
@@ -199,12 +205,31 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+
+.billboard2 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../img/_billboard.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     color: #fff;
 
 }
-
+.subbillboard {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
 .billboard-title {
     font-size: 70px;
 }
@@ -215,7 +240,7 @@ nav {
     font-size: 18px;
 }
 
-.billboard >  div {
+.subbillboard >  div {
     display: flex;
 
 
@@ -236,7 +261,7 @@ nav {
         width: 100%;
 
         line-height: 1.5;
-        font-size: 14px;
+        font-size: 16px;
         padding: 10px;text-align: center;
     }
 
@@ -249,7 +274,7 @@ nav {
         height: auto;
         padding: 40px;
     }
-    .billboard div {
+    .subbillboard div {
         display: inline-block;
 
     }
@@ -316,7 +341,7 @@ nav {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
 
-    font-family: "dosis";
+
 }
 
 
@@ -401,7 +426,7 @@ nav {
 
 
 #quot div:not(:first-child){
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
@@ -435,7 +460,7 @@ nav {
     }
 
     #quot div:first-child{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     #quot div:not(:first-child){
