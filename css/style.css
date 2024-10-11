@@ -328,6 +328,7 @@ nav {
 }
 
 .flex-container {
+
     padding: 0;
     margin: 10px 0 10px 0;
     justify-content: center;
@@ -346,6 +347,7 @@ nav {
 
 
 .flex-item {
+    border-radius: 2%;
     margin: 8px;
     padding: 8px;
     background-color: #fff;
