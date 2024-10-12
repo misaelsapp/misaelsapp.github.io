@@ -22,6 +22,8 @@ function visit(url, param, blank) {
 
 }
 
+
+
 $(document).ready(function () {
     var el_nav = $(".nav-links > li:not(:first-child)");
     if (ismobile()) {
@@ -69,6 +71,17 @@ $(document).ready(function () {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         $('.billboard').css('background-image', 'url(' + images[currentIndex] + ')');
     });
+
+
+
+    // $(document).on("contextmenu", function(e) {
+    //     e.preventDefault(); 
+    //     if ($("#warning").length === 0) {
+    //         $("body").append('<div id="warning">Right-click is disabled.</div>');
+    //     }
+    //     $("#warning").fadeIn(400).delay(2000).fadeOut(400);
+    // });
+
 });
 
 
