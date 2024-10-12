@@ -216,7 +216,7 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    transition: background-image 0.5s ease;
 }
 
 .billboard2 {
@@ -538,3 +538,13 @@ nav {
         padding: 10px;
     }
 }
+
+.icon-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Jarak antar ikon */
+    font-size: 40px; /* Ukuran ikon */
+}
+

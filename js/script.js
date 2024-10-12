@@ -1,3 +1,4 @@
+
 var ishamburgermenu = false;
 const currentYear = new Date().getFullYear();
 
@@ -60,8 +61,23 @@ $(document).ready(function () {
     );
 
 
+    var currentIndex = 0;
+    var images = [
+        'img/billboard.png',
+        'img/billboard4.png',
+        'img/billboard3.png',
+    ];
+    $('.leftarrow').click(function () {
+        currentIndex = (currentIndex + 1) % images.length; 
+        $('.billboard').css('background-image', 'url(' + images[currentIndex] + ')');
+    });
 
+    $('.rightarrow').click(function () {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; 
+        $('.billboard').css('background-image', 'url(' + images[currentIndex] + ')');
+    });
 });
+
 
 
 
