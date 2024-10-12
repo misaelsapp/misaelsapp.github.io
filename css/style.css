@@ -138,11 +138,13 @@ nav {
     padding: 0;
 
 
+
 }
 
 
 .nav-links li {
     margin-right: 30px;
+
 }
 
 .nav-links li a {
@@ -171,7 +173,7 @@ nav {
 
     .nav-links {
         display: block;
-        width: 100%;
+        width: 100%; 
     }
 
     .nav-links>li:not(:first-child) {
@@ -186,7 +188,7 @@ nav {
         padding: 0;
         position: fixed;
         display: block;
-        background-image: url("../img/hamburger.png");
+        background-image: url("../img/hamburger_black.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: 30px;
@@ -351,6 +353,7 @@ nav {
     margin: 8px;
     padding: 8px;
     background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .flex-item .desc {
@@ -393,12 +396,13 @@ nav {
     }
 }
 
-
+.founder-container{
+    padding: 30px;
+}
 #founder {
     display: flex;
-    padding: 30px;
     width: 100%;     
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #photo {
@@ -440,14 +444,14 @@ nav {
 }
 @media (max-width: 480px) {
 
-    #founder {
+    .founder-container{
         padding: 10px;
     }
 
     #photo {
 
         width: 100px;
-        height: 100px;
+        height: 150px;
     }
 
     #quot {
@@ -458,7 +462,6 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 0 9px 9px 0;
     }
 
     #quot div:first-child{
@@ -497,4 +500,32 @@ nav {
     background-color: #F39C12;
     height: 10px;
     border-radius: 10px;
+}
+
+.log-parent{
+    padding: 30px;
+}
+.log-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.log-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.log-details {
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+    .log-parent{
+        padding: 10px;
+    }
 }
