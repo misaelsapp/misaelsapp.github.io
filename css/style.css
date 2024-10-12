@@ -13,11 +13,19 @@ footer{
     padding: 30px;
     
 }
-
+footer > #footerInfo{
+    max-width: 50%;
+    display: inline-block;
+    text-align: center;
+}
 @media screen and (max-width: 1000px) {
     footer{
         padding: 10px;
         
+    }
+
+    footer > #footerInfo{
+        max-width: 100%;
     }
     
 }
@@ -614,6 +622,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .tech-logos > img {
@@ -626,7 +635,8 @@ nav {
 
     .tech-logos {
         padding: 10px;
-        display: inline;
+        display: block;
+
     }
 
     .tech-logos > img {
