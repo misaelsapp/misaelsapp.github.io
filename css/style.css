@@ -544,7 +544,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Jarak antar ikon */
-    font-size: 40px; /* Ukuran ikon */
+    font-size: 40px; 
 }
 
+@media (max-width: 480px) {
+    .icon-container {
+        padding: 10px;
+        font-size: 30px;
+    }
+    
+}
