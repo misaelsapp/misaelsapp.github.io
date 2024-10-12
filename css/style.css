@@ -100,7 +100,7 @@ html {
 
 
 .container {
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto
 }
 
@@ -114,7 +114,12 @@ header {
     width: 100%;
     height: 60px;
     left: 0;
+    transition: height 0.3s ease;
     background-color: transparent;
+}
+
+#headerNav {
+    transition: background-color 0.3s ease; /* Smooth transition for header background */
 }
 
 nav {
@@ -124,11 +129,12 @@ nav {
     justify-content: flex-start;
     align-items: center;
     padding: 0 20px;
-
+    transition: height 0.3s ease;
 }
 
 .logo img {
     height: 40px;
+    transition: height 0.3s ease;
 }
 
 .nav-links {
@@ -137,24 +143,27 @@ nav {
     margin: 0;
     padding: 0;
 
-
+    transition: background-color 0.3s ease; 
 
 }
 
 
 .nav-links li {
     margin-right: 30px;
-
+    background-color: transparent;
+    /* transition: background-color 0.3s ease, border 0.3s ease; */
 }
 
 .nav-links li a {
     color: #333333;
     font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s ease; 
 }
 
 .nav-links li a:hover {
     color: #E74C3C;
+    transition: color 0.3s ease; 
 }
 
 

@@ -70,6 +70,9 @@ $(window).scroll(function () {
     var el_nav = $(".nav-links > li:not(:first-child)");
     var headerNav = $("#headerNav");
     var linkNav = $(".nav-links li a ");
+    var logo = $(".logo img");
+    var header = $("header");
+    var nav = $("nav");
     var scrollTop = $(window).scrollTop();
     if (scrollTop > 0) {
         headerNav.css({
@@ -82,14 +85,26 @@ $(window).scroll(function () {
             "color": linknavColor
         })
 
-        el_burger.css({
-            "background-image": "url('img/hamburger.png')"
-        })
-        el_nav.css({
-            "background-color": "#333",
-            "border": "3px solid #333",
-        })
+        if (ismobile()) {
+            el_burger.css({
+                "background-image": "url('img/hamburger.png')",
+                "height": "20px"
+            })
+            el_nav.css({
+                "background-color": "#333",
+                "border": "3px solid #333",
+            })
+        }
 
+        logo.css({
+            "height": "30px"
+        })
+        header.css({
+            "height": "50px"
+        })
+        nav.css({
+            "height": "50px"
+        })
     } else {
         headerNav.css({
             "position": "relative",
@@ -99,14 +114,27 @@ $(window).scroll(function () {
         linkNav.css({
             "color": linknavColor
         })
-        el_burger.css({
-            "background-image": "url('img/hamburger_black.png')"
-        })
-        el_nav.css({
-            "background-color": "#ccc",
-            "border": "3px solid #ccc",
-        })
 
+        if (ismobile()) {
+
+            el_burger.css({
+                "background-image": "url('img/hamburger_black.png')",
+                "height": "30px"
+            })
+            el_nav.css({
+                "background-color": "#ccc",
+                "border": "3px solid #ccc",
+            })
+        }
+        logo.css({
+            "height": "40px"
+        })
+        header.css({
+            "height": "60px"
+        })
+        nav.css({
+            "height": "60px"
+        })
     }
 });
 
@@ -125,7 +153,7 @@ function hamburgermenu() {
         if (scrollTop > 0) {
             el_nav.each(function () {
                 if (i > 0) { distance = distance + 40; }
-    
+
                 $(this).css({
                     "padding": "8px",
                     "text-align": "center",
@@ -140,10 +168,10 @@ function hamburgermenu() {
                 })
                 i++;
             });
-        }else{
+        } else {
             el_nav.each(function () {
                 if (i > 0) { distance = distance + 40; }
-    
+
                 $(this).css({
                     "padding": "8px",
                     "text-align": "center",
@@ -164,7 +192,6 @@ function hamburgermenu() {
 }
 
 
-
 function scrollToElement(el) {
 
     if (ismobile()) {
@@ -177,14 +204,18 @@ function scrollToElement(el) {
     $("html, body").animate({
         scrollTop: $("#" + el).offset().top - 80
     }, {
-        duration: 500,
+        duration: 1000,
         easing: "swing"
     });
 }
 
 
 function ismobile() {
-    return window.innerWidth < 1000;
+    const userAgent = window.navigator.userAgent;
+    const mobileCheck = /Mobi|Android|iPhone|iPad|iPod/.test(userAgent);
+    const mediaQueryCheck = window.matchMedia("(max-width: 999px)").matches;
+
+    return mobileCheck || mediaQueryCheck;
 }
 
 function arr_keyframe(num, value) {
