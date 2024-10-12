@@ -29,7 +29,7 @@ $(document).ready(function () {
     if (ismobile()) {
         el_nav.hide()
     }
-    skillanim()
+
     var waypoints = []
     $('.waypoint').each(function (index, value) {
 
@@ -249,51 +249,3 @@ function ismobile() {
     return mobileCheck || mediaQueryCheck;
 }
 
-function arr_keyframe(num, value) {
-    $.keyframe.define([{
-        name: 'pbanim' + num,
-        'from': { 'width': '0' },
-        'to': { 'width': value + '%' },
-    }]);
-}
-
-function skillanim() {
-    var num = 0;
-    var pbval = ["75", "75", "70", "20", "70", "5", "70", "75", "70", "75", "5", "45", "5", "60", "5", "5", "5", "70"];
-    var el = $('div.progressbar div');
-    el.each(function () {
-        arr_keyframe(num, pbval[num])
-        $(this).playKeyframe({
-            name: 'pbanim' + num,
-            duration: '1s',
-            timingFunction: 'linear', //
-            delay: '0s',
-            direction: 'normal',
-            fillMode: 'forwards'
-        });
-
-        num++;
-    })
-    num = 0;
-    $('.skill_label .lblpercent').each(function () {
-        animateValue(this, 0, pbval[num], 1000);
-        num++
-    });
-
-}
-
-
-
-
-function animateValue(obj, start, end, duration) {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        obj.innerHTML = "(" + Math.floor(progress * (end - start) + start) + "%)";
-        if (progress < 1) {
-            window.requestAnimationFrame(step);
-        }
-    };
-    window.requestAnimationFrame(step);
-}
