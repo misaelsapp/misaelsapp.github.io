@@ -51,14 +51,7 @@ $(document).ready(function () {
 
     $("#curyear").text(currentYear)
 
-    $(".nav-links li a").hover(
-        function () {
-            $(this).css("color", "#E74C3C");
-        },
-        function () {
-            $(this).css("color", linknavColor);
-        }
-    );
+
 
 
     var currentIndex = 0;
@@ -68,12 +61,12 @@ $(document).ready(function () {
         'img/billboard3.png',
     ];
     $('.leftarrow').click(function () {
-        currentIndex = (currentIndex + 1) % images.length; 
+        currentIndex = (currentIndex + 1) % images.length;
         $('.billboard').css('background-image', 'url(' + images[currentIndex] + ')');
     });
 
     $('.rightarrow').click(function () {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; 
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
         $('.billboard').css('background-image', 'url(' + images[currentIndex] + ')');
     });
 });
@@ -82,6 +75,15 @@ $(document).ready(function () {
 
 
 $(window).scroll(function () {
+
+    $(".nav-links li a").hover(
+        function () {
+            $(this).css("color", "#E74C3C");
+        },
+        function () {
+            $(this).css("color", linknavColor);
+        }
+    );
     var el_burger = $(".nav-links > li:first-child");
     var el_nav = $(".nav-links > li:not(:first-child)");
     var headerNav = $("#headerNav");
