@@ -195,7 +195,7 @@ nav {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 
     .logo img {
         display: none;
@@ -285,7 +285,7 @@ nav {
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 
     .billboard-title {
         width: 100%;
@@ -359,7 +359,7 @@ nav {
     background-color: #C0392B;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 
     .button-red,.button-blue{
         width: 100%;
@@ -479,7 +479,7 @@ nav {
     background-color: #2976aa;
     color: #ffffff;
 }
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 
     .founder-container{
         padding: 10px;
@@ -561,7 +561,7 @@ nav {
     line-height: 1.6;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
     .log-parent{
         padding: 10px;
     }
@@ -575,7 +575,7 @@ nav {
     font-size: 40px; 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
     .icon-container {
         padding: 10px;
         font-size: 30px;
@@ -619,19 +619,20 @@ nav {
 
 .tech-logos {
     padding: 30px;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .tech-logos > img {
+    max-width: 100%;
     height: 50px;
     margin: 20px;
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 
     .tech-logos {
         padding: 10px;
