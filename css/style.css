@@ -541,12 +541,16 @@ nav {
 
 .log-parent{
     padding: 30px;
+    display: flex;
+    justify-content: center;
+
 }
 .log-container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    margin: 10px;
 }
 
 .log-title {
@@ -562,7 +566,13 @@ nav {
 }
 
 @media (max-width: 1000px) {
+
     .log-parent{
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .log-container {
         padding: 10px;
     }
 }
