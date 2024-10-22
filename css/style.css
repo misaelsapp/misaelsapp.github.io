@@ -107,6 +107,7 @@ html {
     font-family: afacadflux;
     background-color: #ccc;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -148,7 +149,8 @@ header {
 }
 
 #headerNav {
-    transition: background-color 0.3s ease; /* Smooth transition for header background */
+    transition: all 0.3s ease-in-out;
+    
 }
 
 nav {
@@ -322,6 +324,8 @@ nav {
 
   
 }
+
+
 
 .button-blue {
     display: inline-block;
@@ -629,7 +633,7 @@ nav {
 
 .tech-logos {
     padding: 30px;
-    display: inline-block;
+    display:block;
     justify-content: center;
     align-items: center;
     text-align: center;
