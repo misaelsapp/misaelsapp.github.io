@@ -1,20 +1,17 @@
-<color=#FF6666>Update 1.0.2-beta</color><size=16>
+Update 1.0.2-beta
 + Added Developer page.
 + Improved performance.
 + Added Hidden Scanner.
 + Fixed bug.
-</size>
 
-<color=#66FF66>Update 1.12<size=16>
-Update 1.0.1-beta<size=16>
+
+Update 1.0.1-beta
 + Fixed Startup.
 + Fixed Proxy Manager
-</size>
 
 
-<size=16>
 Thank you for your continued support and feedback. Stay tuned for more updates!
 
 Best regards,  
-Misael</size></color>
+Misael
 
