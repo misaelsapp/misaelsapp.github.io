@@ -1,8 +1,10 @@
 Update 1.0.2-beta
-+ Added Developer page.
-+ Improved performance.
-+ Added Hidden Scanner.
-+ Fixed bug.
++ Expanded Database: Increased the number of databases to enhance scanning accuracy and coverage.
++ Additional Filter Options for Quick Scan: Added new filter options to allow for more customized and faster scans.
++ Machine Learning Scanning Option: Integrated a machine learning-powered scanning option for improved detection accuracy.
++ User-Defined Database Page: Added a new page where users can add their own databases using fuzzy hashing and machine learning-based datasets.
++ UI Optimization: Improved the user interface for a more seamless and intuitive experience.
++ Show Hidden Files/Folders: Introduced a new function to display hidden files and folders during the scan process.
 
 
 Update 1.0.1-beta
