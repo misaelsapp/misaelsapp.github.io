@@ -1,3 +1,8 @@
+Update 1.0.3-beta
++ Added Heuristic Detection
++ Expanded Database
++ UI Optimization
+
 Update 1.0.2-beta
 + Expanded Database: Increased the number of databases to enhance scanning accuracy and coverage.
 + Additional Filter Options for Quick Scan: Added new filter options to allow for more customized and faster scans.
