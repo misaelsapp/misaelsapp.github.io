@@ -1,15 +1,21 @@
+Update 1.0.4-beta
++ Added Registry Cleaner (Experimental)
++ Improvment Heuristic Detection
++ Added Free and Pro Version
++ Expanded Database
+
 Update 1.0.3-beta
 + Added Heuristic Detection
 + Expanded Database
 + UI Optimization
 
 Update 1.0.2-beta
-+ Expanded Database: Increased the number of databases to enhance scanning accuracy and coverage.
-+ Additional Filter Options for Quick Scan: Added new filter options to allow for more customized and faster scans.
-+ Machine Learning Scanning Option: Integrated a machine learning-powered scanning option for improved detection accuracy.
-+ User-Defined Database Page: Added a new page where users can add their own databases using fuzzy hashing and machine learning-based datasets.
-+ UI Optimization: Improved the user interface for a more seamless and intuitive experience.
-+ Show Hidden Files/Folders: Introduced a new function to display hidden files and folders during the scan process.
++ Expanded Database
++ Additional Filter Options for Quick Scan
++ Machine Learning Scanning Option
++ User-Defined Database Page
++ UI Optimization
++ Show Hidden Files/Folders
 
 
 Update 1.0.1-beta
