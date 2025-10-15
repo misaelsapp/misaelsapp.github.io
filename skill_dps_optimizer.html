@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalkulator & Optimasi DPS Skill</title>
+  <title>Kalkulator DPS Skill</title>
   <style>
     body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px; }
     h1, h2 { color: #4af; }
@@ -19,7 +19,7 @@
 </head>
 <body>
 
-  <h1>Kalkulator DPS Skill + Optimasi SP</h1>
+  <h1>Kalkulator DPS Skill</h1>
 
   <label>Total Skill Point Tersedia: 
     <input type="number" id="totalSP" value="76">
@@ -29,7 +29,6 @@
 
   <button onclick="addSkill()">Tambah Skill</button>
   <button onclick="calculate()">Hitung DPS</button>
-  <button onclick="optimize()">Optimalkan DPS Otomatis</button>
 
   <div id="output"></div>
 
@@ -87,70 +86,12 @@
 
       const remain = totalSP - totalUsed;
       document.getElementById("output").innerHTML = `
-        <h2>Hasil Perhitungan Manual</h2>
+        <h2>Hasil Perhitungan</h2>
         <table>
           <tr><th>Skill</th><th>Level</th><th>SP Terpakai</th><th>Damage</th><th>DPS</th></tr>
           ${rows}
         </table>
         <p><b>Total DPS:</b> ${totalDPS.toFixed(2)}</p>
-        <p><b>Total SP Terpakai:</b> ${totalUsed}/${totalSP}</p>
-        <p><b>Sisa SP:</b> ${remain}</p>
-      `;
-    }
-
-    // --- OPTIMISASI DPS OTOMATIS ---
-    function optimize() {
-      const totalSP = parseInt(document.getElementById("totalSP").value);
-      const data = getSkillsData();
-      const maxLevels = data.map(d => d.dmgArr.length);
-      const spPerLv = data.map(d => d.spPerLv);
-
-      let bestCombo = null;
-      let bestDPS = 0;
-
-      function recurse(i, levels, usedSP, totalDPS) {
-        if (i === data.length) {
-          if (usedSP <= totalSP && totalDPS > bestDPS) {
-            bestDPS = totalDPS;
-            bestCombo = [...levels];
-          }
-          return;
-        }
-        for (let lvl = 1; lvl <= maxLevels[i]; lvl++) {
-          const cost = (lvl - 1) * spPerLv[i];
-          const dmg = data[i].dmgArr[lvl - 1];
-          const dps = calcDPS(dmg, data[i].cd, data[i].anim);
-          recurse(i + 1, [...levels, lvl], usedSP + cost, totalDPS + dps);
-        }
-      }
-
-      recurse(0, [], 0, 0);
-
-      if (!bestCombo) {
-        document.getElementById("output").innerHTML = "<p>Tidak ada kombinasi valid.</p>";
-        return;
-      }
-
-      // Tampilkan hasil
-      let rows = "";
-      let totalUsed = 0;
-      for (let i = 0; i < bestCombo.length; i++) {
-        const lvl = bestCombo[i];
-        const dmg = data[i].dmgArr[lvl - 1];
-        const dps = calcDPS(dmg, data[i].cd, data[i].anim);
-        const used = (lvl - 1) * spPerLv[i];
-        totalUsed += used;
-        rows += `<tr><td>Skill ${i+1}</td><td>${lvl}</td><td>${used}</td><td>${dmg}</td><td>${dps.toFixed(2)}</td></tr>`;
-      }
-
-      const remain = totalSP - totalUsed;
-      document.getElementById("output").innerHTML = `
-        <h2>Hasil Optimasi DPS Maksimal</h2>
-        <table>
-          <tr><th>Skill</th><th>Level Optimal</th><th>SP Terpakai</th><th>Damage</th><th>DPS</th></tr>
-          ${rows}
-        </table>
-        <p><b>Total DPS Maksimum:</b> ${bestDPS.toFixed(2)}</p>
         <p><b>Total SP Terpakai:</b> ${totalUsed}/${totalSP}</p>
         <p><b>Sisa SP:</b> ${remain}</p>
       `;
