@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator DPS Skill</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px; }
+    h1, h2 { color: #4af; }
+    .skill { border: 1px solid #555; padding: 10px; margin-bottom: 15px; border-radius: 10px; background: #222; }
+    input { width: 80px; margin: 3px; background: #333; border: 1px solid #666; color: #fff; padding: 3px; border-radius: 5px; }
+    button { margin-top: 10px; padding: 8px 15px; border: none; background: #4af; color: #fff; font-weight: bold; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #5cf; }
+    #output { margin-top: 20px; padding: 10px; background: #222; border-radius: 10px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #444; padding: 5px; text-align: center; }
+    th { background: #333; }
+  </style>
+</head>
+<body>
+
+  <h1>Kalkulator DPS Skill</h1>
+
+  <label>Total Skill Point Tersedia: 
+    <input type="number" id="totalSP" value="76">
+  </label>
+
+  <div id="skills"></div>
+
+  <button onclick="addSkill()">Tambah Skill</button>
+  <button onclick="calculate()">Hitung DPS</button>
+
+  <div id="output"></div>
+
+  <script>
+    let skillCount = 0;
+
+    function addSkill() {
+      if (skillCount >= 4) { alert("Maksimum 4 skill!"); return; }
+      skillCount++;
+      const div = document.createElement("div");
+      div.className = "skill";
+      div.innerHTML = `
+        <h3>Skill ${skillCount}</h3>
+        Damage per Level (pisahkan dengan koma):<br>
+        <input type="text" id="damage${skillCount}" value="1000"><br>
+        Cooldown (detik): <input type="number" id="cd${skillCount}" value="10"><br>
+        Animation (detik): <input type="number" id="anim${skillCount}" value="2"><br>
+        SP per Level: <input type="number" id="sp${skillCount}" value="3"><br>
+        Level Dipilih: <input type="number" id="lv${skillCount}" value="1"><br>
+      `;
+      document.getElementById("skills").appendChild(div);
+    }
+
+    function getSkillsData() {
+      const data = [];
+      for (let i = 1; i <= skillCount; i++) {
+        const dmgArr = document.getElementById(`damage${i}`).value.split(",").map(Number);
+        const cd = parseFloat(document.getElementById(`cd${i}`).value);
+        const anim = parseFloat(document.getElementById(`anim${i}`).value);
+        const spPerLv = parseInt(document.getElementById(`sp${i}`).value);
+        data.push({ dmgArr, cd, anim, spPerLv });
+      }
+      return data;
+    }
+
+    function calcDPS(dmg, cd, anim) {
+      return dmg / (cd + anim);
+    }
+
+    function calculate() {
+      const totalSP = parseInt(document.getElementById("totalSP").value);
+      const data = getSkillsData();
+      let totalUsed = 0, totalDPS = 0;
+      let rows = "";
+
+      for (let i = 0; i < data.length; i++) {
+        const lvl = parseInt(document.getElementById(`lv${i+1}`).value);
+        const dmg = data[i].dmgArr[lvl - 1] || data[i].dmgArr[data[i].dmgArr.length - 1];
+        const dps = calcDPS(dmg, data[i].cd, data[i].anim);
+        const used = (lvl - 1) * data[i].spPerLv;
+        totalUsed += used;
+        totalDPS += dps;
+        rows += `<tr><td>Skill ${i+1}</td><td>${lvl}</td><td>${used}</td><td>${dmg}</td><td>${dps.toFixed(2)}</td></tr>`;
+      }
+
+      const remain = totalSP - totalUsed;
+      document.getElementById("output").innerHTML = `
+        <h2>Hasil Perhitungan</h2>
+        <table>
+          <tr><th>Skill</th><th>Level</th><th>SP Terpakai</th><th>Damage</th><th>DPS</th></tr>
+          ${rows}
+        </table>
+        <p><b>Total DPS:</b> ${totalDPS.toFixed(2)}</p>
+        <p><b>Total SP Terpakai:</b> ${totalUsed}/${totalSP}</p>
+        <p><b>Sisa SP:</b> ${remain}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
