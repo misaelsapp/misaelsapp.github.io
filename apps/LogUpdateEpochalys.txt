@@ -1,0 +1,12 @@
+<color=#FF6666><size=16>Selamat datang para pejuang, bantu kami menyelamatkan dunia dari invasi mahkluk asing.</size></color>
+
+<color=#66FF66>Update 1.0<size=16>
++ New Release
+</size>
+
+<size=16>
+Thank you for your continued support and feedback. Stay tuned for more updates!
+
+Best regards,  
+Misael</size></color>
+
