@@ -1,12 +1,9 @@
-<color=#66FF66>Update 1.0<size=16>
-+ Official Release
-</size>
+<color=#C6D141>Update 1.0
+<size=16>+ Official Release</size>
 
-<size=16>
-Thank you for all the support and valuable feedback.  
+<size=16>Thank you for all the support and valuable feedback.  
 This update marks the initial release, with more improvements already in development.
 
 Stay tuned, this is just the beginning.
 
-— Misael
-</size></color>
+— Misael (Developer)</size></color>
