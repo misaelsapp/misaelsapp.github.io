@@ -1,4 +1,3 @@
-
 var ishamburgermenu = false;
 const currentYear = new Date().getFullYear();
 
@@ -21,7 +20,6 @@ function visit(url, param, blank) {
     }
 
 }
-
 
 
 $(document).ready(function () {
@@ -54,8 +52,6 @@ $(document).ready(function () {
     $("#curyear").text(currentYear)
 
 
-
-
     var currentIndex = 0;
     var images = [
         'img/billboard.png',
@@ -73,9 +69,8 @@ $(document).ready(function () {
     });
 
 
-
-    $(document).on("contextmenu", function(e) {
-        e.preventDefault(); 
+    $(document).on("contextmenu", function (e) {
+        e.preventDefault();
         if ($("#warning").length === 0) {
             $("body").append('<div id="warning">Right-click is disabled.</div>');
         }
@@ -83,8 +78,6 @@ $(document).ready(function () {
     });
 
 });
-
-
 
 
 $(window).scroll(function () {
@@ -183,7 +176,9 @@ function hamburgermenu() {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 0) {
             el_nav.each(function () {
-                if (i > 0) { distance = distance + 40; }
+                if (i > 0) {
+                    distance = distance + 40;
+                }
 
                 $(this).css({
                     "padding": "8px",
@@ -201,7 +196,9 @@ function hamburgermenu() {
             });
         } else {
             el_nav.each(function () {
-                if (i > 0) { distance = distance + 40; }
+                if (i > 0) {
+                    distance = distance + 40;
+                }
 
                 $(this).css({
                     "padding": "8px",

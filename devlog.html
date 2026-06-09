@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="img/icon.png" rel="shortcut icon" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Dev Log — projects currently in development by Misael" name="description">
+    <title>Misael's Lab</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header id="headerNav">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img alt="Misael's Lab" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+                     src="img/logo.png">
+                <span class="logo-text" style="display:none;">MISAEL</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li id="navicon" onclick="toggleMenu()"></li>
+                <li><a href="index.html">DASHBOARD</a></li>
+                <li><a href="artworks.html">ARTWORKS</a></li>
+                <li><a class="active" href="devlog.html">DEV LOG</a></li>
+                <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== INNER HERO ===== -->
+<div class="inner-hero">
+    <div class="inner-hero-bg"></div>
+    <div class="container">
+        <div class="inner-hero-title">Dev Log</div>
+        <div class="inner-hero-desc">A behind the scenes look at projects currently in development.</div>
+    </div>
+</div>
+
+<!-- ===== DEVLOG SECTION ===== -->
+<section class="content-section">
+    <div class="container">
+        <div class="devlog-grid" id="devlogGrid"></div>
+    </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="devlog-lightbox" id="devlogLightbox">
+    <img alt="" id="devlogLightboxImg" src="">
+</div>
+
+<!-- WhatsApp -->
+<a class="whatsapp-button" href="https://wa.me/6281269948582" target="_blank" title="Chat on WhatsApp">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#25D366" r="16"/>
+        <path d="M16 7.5C11.3 7.5 7.5 11.3 7.5 16c0 1.5.4 2.9 1.1 4.2L7.5 24.5l4.4-1.1c1.2.6 2.6 1 4.1 1 4.7 0 8.5-3.8 8.5-8.5S20.7 7.5 16 7.5zm4.2 11.6c-.2.5-1 1-1.5 1.1-.4.1-.9.1-1.4-.1-.3-.1-.7-.2-1.2-.5-2.1-1-3.4-3.1-3.5-3.2-.1-.2-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.2 0 .3 0 .5.4.2.5.6 1.6.7 1.7.1.1.1.3 0 .4-.1.2-.1.3-.3.4l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.2 1.6 2 .7.7 1.5 1 1.8 1.1.3.1.5.1.6-.1.2-.2.6-.8.8-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.8-.1 1.3z"
+              fill="#fff"/>
+    </svg>
+</a>
+
+<!-- Facebook -->
+<a class="facebook-button" href="https://web.facebook.com/MisaelArden/" target="_blank" title="Visit Facebook">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#1877F2" r="16"/>
+        <path d="M21 16h-3v10h-4V16h-2v-3.5h2v-2c0-2.5 1.2-4 4-4h2.5V10H19c-.8 0-1 .3-1 1v1.5h3.2L21 16z" fill="#fff"/>
+    </svg>
+</a>
+
+<footer>
+    <p>Copyright &copy; <span id="curyear"></span> Misael's Lab. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+    document.getElementById('curyear').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('headerNav');
+        nav.style.background = window.scrollY > 60
+            ? 'rgba(10,10,15,0.95)'
+            : 'rgba(10,10,15,0.75)';
+    });
+
+    // ─── ADD YOUR PROJECTS HERE ───────────────────────────────────────────────
+    // status options: "Planning" | "In Development" | "Testing" | "Nearly Done"
+    // screenshots: array of image paths (first one is shown as cover)
+    const projects = [
+        {
+            title: "Monster Hunter",
+            status: "Discontinued",
+            desc: "A fan made Monster Hunter inspired project focused on creature battles, exploration, and immersive hunting mechanics.",
+            screenshots: ["devlog/mh1.png", "devlog/mh2.png", "devlog/mh3.png"]
+        },
+        {
+            title: "Epochalys",
+            status: "In Development",
+            desc: "An original fantasy RPG set in a world shaped by ancient civilizations, mysteries, and evolving adventures.",
+            screenshots: ["devlog/e1.png", "devlog/e2.png", "devlog/e3.png", "devlog/e4.png", "devlog/e5.png", "devlog/e6.png", "devlog/e7.png", "devlog/e8.png"]
+        },
+        {
+            title: "Digimon",
+            status: "In Development",
+            desc: "Raise, evolve, and battle alongside digital companions in an adventure across the Digital World.",
+            screenshots: ["devlog/d1.png", "devlog/d2.png", "devlog/d3.png", "devlog/d4.png", "devlog/d5.png", "devlog/d6.png", "devlog/d7.png", "devlog/d8.png", "devlog/d9.png", "devlog/d10.png"]
+        }
+    ];
+    // ─────────────────────────────────────────────────────────────────────────
+
+    const statusClass = {
+        "Planning": "status-planning",
+        "In Development": "status-in-development",
+        "Testing": "status-testing",
+        "Nearly Done": "status-nearly-done",
+        "Discontinued": "status-discontinued-dev"
+    };
+
+    const grid = document.getElementById('devlogGrid');
+
+    if (projects.length === 0) {
+        grid.innerHTML = `<div class="devlog-empty">No entries yet — check back soon.</div>`;
+    } else {
+        projects
+            .reverse()
+            .forEach((p, i) => {
+                const cover = p.screenshots[0] || '';
+                const hasMultiple = p.screenshots.length > 1;
+
+                grid.insertAdjacentHTML('beforeend', `
+        <div class="devlog-entry" style="opacity:0; transform:translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;">
+          <div class="devlog-info">
+            <div class="devlog-index">Entry ${String(i + 1).padStart(2, '0')}</div>
+            <div class="devlog-title">${p.title}</div>
+            <div class="devlog-status ${statusClass[p.status] || 'status-in-development'}">${p.status}</div>
+            <p class="devlog-desc">${p.desc}</p>
+          </div>
+          <div class="devlog-screenshots" data-cover="${cover}">
+            <img src="${cover}" alt="${p.title} screenshot" id="cover-${i}">
+            ${hasMultiple ? `
+              <button class="carousel-btn carousel-prev" data-index="0">❮</button>
+              <button class="carousel-btn carousel-next" data-index="0">❯</button>
+              <div class="carousel-dots">
+                ${p.screenshots.map((_, idx) => `<span class="carousel-dot ${idx === 0 ? 'active' : ''}" data-slide="${idx}"></span>`).join('')}
+              </div>
+              <div class="devlog-screenshots-count"><i class="fas fa-images"></i> ${p.screenshots.length}</div>
+            ` : ''}
+          </div>
+        </div>
+      `);
+            });
+    }
+
+    // Thumbnail switching
+    document.addEventListener('click', e => {
+        const thumb = e.target.closest('.devlog-thumb');
+        if (thumb) {
+            e.stopPropagation();
+            const strip = thumb.closest('.devlog-thumb-strip');
+            const screenshots = thumb.closest('.devlog-screenshots');
+            const coverImg = screenshots.querySelector('img:not(.devlog-thumb)');
+            strip.querySelectorAll('.devlog-thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+            coverImg.src = thumb.dataset.src;
+        }
+    });
+
+
+    // Carousel
+    document.addEventListener('click', e => {
+        const box = e.target.closest('.devlog-screenshots');
+        if (!box) return;
+
+        const entry = box.closest('.devlog-entry');
+        const title = entry.querySelector('.devlog-title').textContent;
+        const project = projects.find(p => p.title === title);
+        if (!project || project.screenshots.length < 2) return;
+
+        const cover = box.querySelector('img:not(.devlog-thumb)');
+        let current = project.screenshots.indexOf(cover.getAttribute('src'));
+
+        if (e.target.closest('.carousel-next')) {
+            e.stopPropagation();
+            current = (current + 1) % project.screenshots.length;
+        } else if (e.target.closest('.carousel-prev')) {
+            e.stopPropagation();
+            current = (current - 1 + project.screenshots.length) % project.screenshots.length;
+        } else if (e.target.classList.contains('carousel-dot')) {
+            e.stopPropagation();
+            current = Number(e.target.dataset.slide);
+        } else {
+            return;
+        }
+
+        cover.src = project.screenshots[current];
+
+        box.querySelectorAll('.carousel-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+        });
+    });
+
+
+    // Lightbox
+    const lightbox = document.getElementById('devlogLightbox');
+    const lightboxImg = document.getElementById('devlogLightboxImg');
+
+    document.addEventListener('click', e => {
+        const screenshots = e.target.closest('.devlog-screenshots');
+        const isThumb = e.target.closest('.devlog-thumb');
+        if (screenshots && !isThumb) {
+            const img = screenshots.querySelector('img:not(.devlog-thumb)');
+            if (img && img.src) {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            }
+        }
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Scroll fade-in
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {threshold: 0.1});
+
+    document.querySelectorAll('.devlog-entry').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

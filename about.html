@@ -2,84 +2,208 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
-    <meta property="og:title" content="About Misael" />
-    <meta property="og:description" content="About Misael's Lab" />
-    <meta property="og:type" content="Website" />
-    <meta property="og:url" content="http://misaelsapp.github.io/about.html" />
-    <meta property="og:image" content="https://misaelsapp.github.io/img/billboard.png" />
-
+    <link href="img/icon.png" rel="shortcut icon" type="image/x-icon"/>
+    <meta content="About Misael" property="og:title"/>
+    <meta content="About Misael's Lab" property="og:description"/>
+    <meta content="Website" property="og:type"/>
+    <meta content="http://misaelsapp.github.io/about.html" property="og:url"/>
+    <meta content="https://misaelsapp.github.io/img/billboard.png" property="og:image"/>
     <meta charset="UTF-8">
-    <meta name="description" content="About Misael and his Lab">
-    <meta name="keywords" content="Misael's App, Software Developer, App Development, Innovative Apps, Prototypes, Technology Solutions, Digital Artist, Android Launcher, Portfolio, Tech Stack, Game Development, Artificial Intelligence, Security Apps, Mobile Apps, Software Engineering, Stellar Launcher, Monster Hunter Extherium, QSIER Cashier Solution, Picasso Studio, Cleanzone Mobile Security, The Cursed Village, Unity, .NET, Kotlin, Java, PHP, jQuery, Minimalistic Design, User-Friendly Interface, Game Animation, Performance Improvement, UI Enhancements, Malware Detection, Gamers, Developers, Tech Enthusiasts, Business Owners, Creative Professionals, Innovative Software, Cutting-edge Technology, Digital Solutions, Game Development Projects, Software Development Portfolio">
-    <meta name="author" content="misael">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Misael</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <script src="js/jquery-3.7.0.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/waypoints.min.js"></script>
+    <meta content="About Misael and his Lab" name="description">
+    <meta content="misael" name="author">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Misael's Lab</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-    <header id="headerNav">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" alt="Logo">
-                </div>
-                <ul class="nav-links">
-                    <li onclick="hamburgermenu()" id="navicon"></li>
-                    <li><a href="index.html">DASHBOARD</a></li>
-                    <li><a href="privacy.html">PRIVACY POLICY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
+
+<!-- ===== NAVBAR ===== -->
+<header id="headerNav">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img alt="Misael's Lab"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+                     src="img/logo.png">
+                <span class="logo-text" style="display:none;">MISAEL</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li id="navicon" onclick="toggleMenu()"></li>
+                <li><a href="index.html">DASHBOARD</a></li>
+                <li><a href="artworks.html">ARTWORKS</a></li>
+                <li><a href="devlog.html">DEV LOG</a></li>
+                <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                <li><a class="active" href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="inner-hero">
+    <div class="inner-hero-bg"></div>
+    <div class="container">
+        <div class="inner-hero-title">About</div>
+        <div class="inner-hero-desc">Learn more about my background, skills, and creative work.</div>
+    </div>
+</div>
+
+<!-- ===== CONTENT ===== -->
+<section class="content-section">
+    <div class="container">
+
+        <div class="content-block">
+            <h2>About Me</h2>
+
+            <p>
+                I am an independent software developer and digital creator passionate about building innovative
+                applications that combine technology, creativity, and practical problem-solving. My work spans desktop,
+                mobile, web, and interactive experiences, with a strong focus on rapid prototyping and experimentation.
+            </p>
+
+            <p>
+                Over the years, I have worked with technologies such as Unity, .NET, Kotlin, Java, PHP, OpenCV, ML Kit,
+                and various AI frameworks to develop applications ranging from games and productivity tools to computer
+                vision and AI-powered solutions. I enjoy transforming ideas into functional products that are both
+                technically solid and enjoyable to use.
+            </p>
+
+            <p>
+                Beyond software development, I also create digital artwork and 3D content using tools such as CorelDRAW
+                and 3ds Max. This combination of technical and creative skills allows me to design complete experiences,
+                from application logic and AI systems to visual assets and user interfaces.
+            </p>
         </div>
-    </header>
-    <div class="billboard2" style="height: 200px;">
-        <div class="container">
-            <div>
-                <div class="billboard-title">About</div>
-                <div class="billboard-desc">Learn more about me and my laboratory</div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>What I Do</h2>
+
+            <p>
+                My work revolves around turning ideas into working products through rapid development, iterative
+                testing, and creative problem-solving. Areas I frequently work on include:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Application Development:</strong>
+                    Building desktop, mobile, and web applications using modern technologies and development frameworks.
+                </li>
+
+                <li>
+                    <strong>Game Development:</strong>
+                    Creating interactive experiences, gameplay systems, tools, and prototypes using Unity and related
+                    technologies.
+                </li>
+
+                <li>
+                    <strong>Artificial Intelligence:</strong>
+                    Developing AI-powered features such as intelligent assistants, machine learning solutions,
+                    text-to-speech systems, and automation tools.
+                </li>
+
+                <li>
+                    <strong>Computer Vision:</strong>
+                    Exploring image processing, object recognition, visual analysis, and camera-based applications using
+                    OpenCV and ML Kit.
+                </li>
+
+                <li>
+                    <strong>Digital Art & 3D Content:</strong>
+                    Designing visual assets, illustrations, user interface elements, and 3D models that enhance software
+                    and interactive experiences.
+                </li>
+
+                <li>
+                    <strong>Rapid Prototyping:</strong>
+                    Quickly transforming concepts into functional prototypes for testing, validation, and continuous
+                    improvement.
+                </li>
+            </ul>
+
+            <p>
+                I enjoy experimenting with emerging technologies and combining multiple disciplines to create solutions
+                that are innovative, practical, and visually engaging.
+            </p>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>My Mission</h2>
+
+            <p>
+                My mission is to bridge technology and creativity by developing applications that solve real-world
+                problems while delivering engaging user experiences. I believe that great software is not only
+                functional, it should also be intuitive, visually appealing, and capable of creating meaningful value
+                for its users.
+            </p>
+
+            <p>
+                Through continuous learning and experimentation, I strive to stay at the forefront of software
+                development, artificial intelligence, and digital content creation. Every project is an opportunity to
+                explore new ideas, challenge technical limitations, and transform concepts into reality.
+            </p>
+
+            <p>
+                Ultimately, my goal is to build products and experiences that inspire curiosity, improve productivity,
+                and demonstrate how technology can be used creatively to make a positive impact.
+            </p>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Contact Me</h2>
+            <p>If you're passionate about technology and want to collaborate on a project, discuss innovative ideas, or
+                simply learn more about my work. I'd love to hear from you.</p>
+            <div class="contact-links">
+                <a class="contact-card" href="https://fastwork.id/user/misael" target="_blank">
+                    <i class="fas fa-briefcase"></i> Fastwork
+                </a>
+                <a class="contact-card" href="https://www.fiverr.com/misaeltechart" target="_blank">
+                    <i class="fas fa-paint-brush"></i> Fiverr
+                </a>
             </div>
         </div>
+
     </div>
+</section>
 
-    <div class="container" style="padding: 10px; background-color: #fff;">
-        <h2>About Me</h2>
-        <p>In my lab, I am constantly pushing the boundaries of what technology can achieve. I specialize in developing prototypes for a variety of applications, driven by the desire to innovate and solve real-world problems. Whether I'm working on a next-gen game, a cutting-edge security tool, or an AI-powered application, I approach each project with the same goal: to create something that is not only functional but also secure, user-friendly, and forward-thinking.</p>
-        <p>My work is deeply rooted in the belief that technology should enhance our lives in meaningful ways. Every project I undertake is an opportunity to explore new ideas, challenge conventions, and bring visions to life. I’m constantly experimenting with the latest tools and methodologies to ensure that my applications are not only relevant today but will continue to be impactful in the future.</p>
-        <br>
-        <h2>What I Do</h2>
-        <p>At the heart of my work is a deep commitment to creating high-quality applications that are both innovative and practical. I engage in every stage of development, including:</p>
-        <ul style="margin-left: 15px; line-height: 1.6;">
-            <li><strong>Conceptualization:</strong> I brainstorm and sketch out ideas to find solutions that address user needs and market gaps, balancing creativity with functionality.</li>
-            <li><strong>Prototyping:</strong> I transform ideas into working prototypes, which allow for early testing and iterative improvements. These prototypes serve as a proof of concept before the full application is developed.</li>
-            <li><strong>Security Focus:</strong> With cyber threats on the rise, I ensure that every application I build is secure, protecting users' data and privacy without compromising usability.</li>
-            <li><strong>Artificial Intelligence:</strong> I leverage the power of AI to automate processes, enhance decision-making, and create smarter applications that anticipate user needs.</li>
-            <li><strong>User Experience Design:</strong> I am passionate about creating immersive experiences that are engaging and intuitive, ensuring users not only enjoy but also benefit from interacting with my applications.</li>
-        </ul>
-        <p>Through these processes, I’m able to develop applications that aren’t just cutting-edge but truly impactful, whether it’s an innovative tool for businesses or an exciting entertainment platform for users.</p>
-        <br>
-        <h2>My Mission</h2>
-        <p>My mission is to build applications that not only meet but exceed user expectations. I believe in constantly evolving, embracing new challenges, and learning from each experience to grow as a developer and thinker. I’m driven by the desire to solve problems and make technology more accessible, efficient, and secure for everyone.</p>
-        <p>Ultimately, I aim to contribute to a future where technology empowers people, improves everyday life, and pushes the limits of what’s possible. Through a commitment to excellence, creativity, and security, I strive to leave a lasting impact on the digital landscape.</p>
-        <br>
-        <h2>Contact Me</h2>
-        <p>If you’re as passionate about technology as I am and want to collaborate on a project, discuss innovative ideas, or simply learn more about my work, I’d love to hear from you. Feel free to reach out at <a style="color: #3498DB;" href="https://fastwork.id/user/misael">Fastwork</a> or <a style="color: #3498DB;" href="https://www.fiverr.com/misaeltechart">Fiverr</a> </span>, and let's explore the possibilities together!</p>
-
-   
-    </div>
-
-
-    
-</body>
-
-<footer class="font-white-color">
-    Copyright &copy; <span id="curyear">2023</span> Misael's App. All Right Reserved.
+<footer>
+    <p>Copyright &copy; <span id="curyear"></span> Misael's App. All Rights Reserved.</p>
 </footer>
 
+
+<!-- WhatsApp -->
+<a class="whatsapp-button" href="https://wa.me/6281269948582" target="_blank" title="Chat on WhatsApp">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#25D366" r="16"/>
+        <path d="M16 7.5C11.3 7.5 7.5 11.3 7.5 16c0 1.5.4 2.9 1.1 4.2L7.5 24.5l4.4-1.1c1.2.6 2.6 1 4.1 1 4.7 0 8.5-3.8 8.5-8.5S20.7 7.5 16 7.5zm4.2 11.6c-.2.5-1 1-1.5 1.1-.4.1-.9.1-1.4-.1-.3-.1-.7-.2-1.2-.5-2.1-1-3.4-3.1-3.5-3.2-.1-.2-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.2 0 .3 0 .5.4.2.5.6 1.6.7 1.7.1.1.1.3 0 .4-.1.2-.1.3-.3.4l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.2 1.6 2 .7.7 1.5 1 1.8 1.1.3.1.5.1.6-.1.2-.2.6-.8.8-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.8-.1 1.3z"
+              fill="#fff"/>
+    </svg>
+</a>
+
+<!-- Facebook -->
+<a class="facebook-button" href="https://web.facebook.com/MisaelArden/" target="_blank" title="Visit Facebook">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#1877F2" r="16"/>
+        <path d="M21 16h-3v10h-4V16h-2v-3.5h2v-2c0-2.5 1.2-4 4-4h2.5V10H19c-.8 0-1 .3-1 1v1.5h3.2L21 16z" fill="#fff"/>
+    </svg>
+</a>
+
+
+<script>
+    document.getElementById('curyear').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('headerNav');
+        nav.style.background = window.scrollY > 60
+            ? 'rgba(10, 10, 15, 0.95)'
+            : 'rgba(10, 10, 15, 0.75)';
+    });
+</script>
+
+</body>
 </html>

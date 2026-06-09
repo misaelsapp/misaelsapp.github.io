@@ -2,145 +2,278 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
-    <meta property="og:title" content="Misael's App" />
-    <meta property="og:description" content="Software Developer" />
-    <meta property="og:type" content="Application" />
-    <meta property="og:url" content="http://misaelsapp.github.io/" />
-    <meta property="og:image" content="https://misaelsapp.github.io/img/billboard.png" />
-
+    <link href="img/icon.png" rel="shortcut icon" type="image/x-icon"/>
+    <meta content="Privacy Policy — Misael's App" property="og:title"/>
+    <meta content="Privacy Policy for Misael's App" property="og:description"/>
+    <meta content="Website" property="og:type"/>
+    <meta content="https://misaelsapp.github.io/privacy.html" property="og:url"/>
+    <meta content="https://misaelsapp.github.io/img/billboard.png" property="og:image"/>
     <meta charset="UTF-8">
-    <meta name="description" content="Software Developer">
-    <meta name="keywords" content="Misael's App, Software Developer, App Development, Innovative Apps, Prototypes, Technology Solutions, Digital Artist, Android Launcher, Portfolio, Tech Stack, Game Development, Artificial Intelligence, Security Apps, Mobile Apps, Software Engineering, Stellar Launcher, Monster Hunter Extherium, QSIER Cashier Solution, Picasso Studio, Cleanzone Mobile Security, The Cursed Village, Unity, .NET, Kotlin, Java, PHP, jQuery, Minimalistic Design, User-Friendly Interface, Game Animation, Performance Improvement, UI Enhancements, Malware Detection, Gamers, Developers, Tech Enthusiasts, Business Owners, Creative Professionals, Innovative Software, Cutting-edge Technology, Digital Solutions, Game Development Projects, Software Development Portfolio">
-    <meta name="author" content="misael">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Misael's App</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/jquery-3.7.0.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/waypoints.min.js"></script>
+    <meta content="Privacy Policy for Misael's App" name="description">
+    <meta content="misael" name="author">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Misael's Lab</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-    <header id="headerNav">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" alt="Logo">
-                </div>
-                <ul class="nav-links">
-                    <li onclick="hamburgermenu()" id="navicon"></li>
-                    <li><a href="index.html">DASHBOARD</a></li>
-                    <li><a href="privacy.html">PRIVACY POLICY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
+
+<!-- ===== NAVBAR ===== -->
+<header id="headerNav">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img alt="Misael's Lab"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+                     src="img/logo.png">
+                <span class="logo-text" style="display:none;">MISAEL</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li id="navicon" onclick="toggleMenu()"></li>
+                <li><a href="index.html">DASHBOARD</a></li>
+                <li><a href="artworks.html">ARTWORKS</a></li>
+                <li><a href="devlog.html">DEV LOG</a></li>
+                <li><a class="active" href="privacy.html">PRIVACY POLICY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="inner-hero">
+    <div class="inner-hero-bg"></div>
+    <div class="container">
+        <div class="inner-hero-title">Privacy Policy</div>
+        <div class="inner-hero-desc">For applications and services published by Misael's App</div>
+    </div>
+</div>
+
+<!-- ===== CONTENT ===== -->
+
+<section class="content-section">
+    <div class="container">
+
+        <div class="content-block">
+            <p>
+                Misael's App is committed to protecting the privacy of users across all applications, games, and
+                services developed and published by Misael. This Privacy Policy explains what information may be
+                collected, how it is used, and the measures taken to protect it.
+            </p>
+
+            <p>
+                By using any application, game, website, or service published by Misael's App, you agree to the
+                practices described in this Privacy Policy.
+            </p>
         </div>
-    </header>
-    <div class="billboard2" style="height: 200px;">
-        <div class="container">
-            <div>
-                <div class="billboard-title">Privacy Policy
-                </div>
-                <div class="billboard-desc">for Misael's App
-                </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Information Collection</h2>
+
+            <ol>
+                <li>
+                    <strong>Personal Information:</strong>
+                    Some applications or services may allow users to contact the developer directly through email or
+                    other communication channels. In such cases, information voluntarily provided by the user, such as
+                    name, email address, or message content, may be collected solely for communication and support
+                    purposes.
+                </li>
+
+                <li>
+                    <strong>Device and Usage Information:</strong>
+                    Certain applications may collect limited technical information such as device model, operating
+                    system version, application version, crash reports, or diagnostic information. This information is
+                    used to improve application stability, performance, and user experience.
+                </li>
+
+                <li>
+                    <strong>Application Permissions:</strong>
+                    Depending on the application's functionality, permissions may be requested to provide specific
+                    features. Requested permissions are only used for their intended purpose and are never accessed
+                    without user consent where required by the operating system.
+                </li>
+            </ol>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Application-Specific Permissions</h2>
+
+            <p>
+                Different applications published by Misael's App may require different permissions depending on their
+                intended functionality.
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Launcher Applications:</strong>
+                    May access installed application information and launcher related settings to provide home screen
+                    functionality and application management features.
+                </li>
+
+                <li>
+                    <strong>Security Applications:</strong>
+                    May access device, file, or installed application information necessary to perform security scans,
+                    malware detection, and protection features.
+                </li>
+
+                <li>
+                    <strong>Creative Applications:</strong>
+                    May request access to photos, media files, cameras, or storage to enable content creation and
+                    editing features.
+                </li>
+
+                <li>
+                    <strong>Business Applications:</strong>
+                    May store transaction records, inventory data, or user generated business information locally on the
+                    device to provide core application functionality.
+                </li>
+
+                <li>
+                    <strong>Games:</strong>
+                    Generally do not collect personal information unless explicitly stated within the application or
+                    required for optional online features.
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Use of Information</h2>
+
+            <ol>
+                <li>
+                    <strong>Application Functionality:</strong>
+                    Information may be used to provide, maintain, and improve the functionality of applications and
+                    services.
+                </li>
+
+                <li>
+                    <strong>Technical Support:</strong>
+                    Information provided by users may be used to respond to support requests, bug reports, feedback, or
+                    general inquiries.
+                </li>
+
+                <li>
+                    <strong>Performance Improvement:</strong>
+                    Technical and diagnostic information may be analyzed to identify issues, improve stability, and
+                    enhance user experience.
+                </li>
+
+                <li>
+                    <strong>Legal Compliance:</strong>
+                    Information may be disclosed when required by applicable laws, regulations, or legal processes.
+                </li>
+            </ol>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Data Security</h2>
+
+            <p>
+                Reasonable technical and organizational measures are implemented to protect collected information from
+                unauthorized access, disclosure, alteration, or destruction. While every effort is made to maintain
+                security, no method of electronic storage or internet transmission can be guaranteed to be completely
+                secure.
+            </p>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Third-Party Services</h2>
+
+            <p>
+                Some applications may integrate with third party services, app stores, analytics providers, or platform
+                services. These third parties may collect information according to their own privacy policies. Users are
+                encouraged to review the privacy policies of any third party services they interact with.
+            </p>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>External Links</h2>
+
+            <p>
+                Applications and websites published by Misael's App may contain links to third party websites or
+                services. Misael's App is not responsible for the content, security, or privacy practices of external
+                websites.
+            </p>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Children's Privacy</h2>
+
+            <p>
+                Applications and services are not intentionally directed toward children under the age of 13. Personal
+                information is not knowingly collected from children. If a parent or guardian believes that personal
+                information has been provided by a child, please contact the developer so appropriate action can be
+                taken.
+            </p>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Changes to This Policy</h2>
+
+            <p>
+                This Privacy Policy may be updated periodically to reflect changes in applications, services, legal
+                requirements, or privacy practices. Users are encouraged to review this page occasionally to remain
+                informed about any updates.
+            </p>
+        </div>
+
+        <div class="content-block" style="margin-top:20px;">
+            <h2>Contact</h2>
+
+            <p>
+                If you have any questions regarding this Privacy Policy, application permissions, or data handling
+                practices, please contact:
+            </p>
+
+            <div class="contact-links">
+                <a class="contact-card" href="mailto:misael_arc@yahoo.com">
+                    <i class="fas fa-envelope"></i> misael_arc@yahoo.com
+                </a>
             </div>
         </div>
+
+
     </div>
+</section>
 
-    <div class="container" style="padding: 10px; background-color: #fff;">
-        <p>
-            At my lab, I am committed to protecting the privacy and security of my users' personal
-            information. This Privacy Policy outlines how I collect, use, and safeguard the information you provide to
-            me when accessing or using my website, products, or services. By using my website or engaging with my
-            products and services, you consent to the practices described in this policy.
-        </p>
 
-        <h3 style="margin-top: 20px;">Information Collection</h3>
-        <ol style="margin-left: 15px;">
-            <li>Personal Information:
-                I may collect personal information, such as your name, email address, contact information, and other
-                relevant details, when you voluntarily provide it to me through forms, registrations, or when contacting
-                me. I only collect the necessary information to fulfill the purpose of your interaction with me.
-            </li>
-
-            <li>Usage Data:
-                I may automatically collect non-personal information about your interaction with my website and services.
-                This may include your IP address, browser type, device information, operating system, referring URLs, and
-                other usage details. This data is collected to analyze trends, administer the website, track user
-                engagement, and gather demographic information.
-            </li>
-        </ol>
-
-        <h3 style="margin-top: 20px;">Use of Information</h3>
-        <ol style="margin-left: 15px;">
-            <li>Providing and Improving Services:
-                I use the information I collect to provide, maintain, and improve my products, services, and website
-                functionality. This includes responding to inquiries, personalizing user experiences, and enhancing the
-                overall user experience.
-            </li>
-
-            <li>Communication:
-                I may use your contact information to communicate with you regarding updates, announcements, newsletters,
-                promotional offers, and other relevant information about my products and services. You can opt-out of
-                receiving these communications at any time.
-            </li>
-
-            <li>Legal Compliance:
-                I may use and disclose your information as required by law, regulation, or legal process, or to protect
-                my rights, safety, or property, or the rights, safety, or property of others.
-            </li>
-        </ol>
-
-        <h3 style="margin-top: 20px;">Data Security</h3>
-        <p>I implement appropriate technical and organizational measures to protect the information I collect and
-            prevent unauthorized access, disclosure, alteration, or destruction. However, please note that no data
-            transmission or storage method can guarantee 100% security. I strive to maintain the highest level of
-            security but cannot guarantee absolute security of your information.
-        </p>
-
-        <h3 style="margin-top: 20px;">Third-Party Disclosure</h3>
-        <p>I do not sell, trade, or otherwise transfer your personal information to third parties without your
-            consent, except in the following circumstances:</p>
-        <ol style="margin-left: 15px;">
-            <li>Trusted third parties who assist me in operating my website, conducting business, or providing services
-                to you.</li>
-            <li>When required by law or to protect my rights, safety, or property, or the rights, safety, or property of
-                others.</li>
-            <li>If I am involved in a merger, acquisition, or sale of all or a portion of my assets. In such cases, I
-                will notify you before your personal information is transferred and becomes subject to a different
-                privacy policy.</li>
-        </ol>
-
-        <h3 style="margin-top: 20px;">External Links</h3>
-        <p>My website or services may contain links to external websites that are not operated by me. I do not
-            have control over the content, privacy policies, or practices of these third-party websites. I encourage you
-            to review the privacy policies of these websites before providing any personal information.
-        </p>
-
-        <h3 style="margin-top: 20px;">Children's Privacy</h3>
-        <p>My products and services are not intended for individuals under the age of 13. I do not knowingly
-            collect personal information from children. If you believe that I have inadvertently collected personal
-            information from a child, please contact me, and I will take appropriate steps to remove that information
-            from my records.
-        </p>
-
-        <h3 style="margin-top: 20px;">Updates to this Policy</h3>
-        <p>I reserve the right to update or modify this Privacy Policy at any time without prior notice. Any
-            changes made will be reflected with a revised "Last Updated" date at the beginning of this policy. I
-            encourage you to review this policy periodically to stay informed about my privacy practices.
-        </p>
-
-        <h3 style="margin-top: 20px;">Contact Me</h3>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your
-            personal information, please contact me at misael_arc@yahoo.com
-        </p>
-    </div>
-</body>
-
-<footer class="font-white-color">
-    Copyright &copy; <span id="curyear">2023</span> Misael's App. All Right Reserved.
+<footer>
+    <p>Copyright &copy; <span id="curyear"></span> Misael's App. All Rights Reserved.</p>
 </footer>
 
+<!-- WhatsApp -->
+<a class="whatsapp-button" href="https://wa.me/6281269948582" target="_blank" title="Chat on WhatsApp">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#25D366" r="16"/>
+        <path d="M16 7.5C11.3 7.5 7.5 11.3 7.5 16c0 1.5.4 2.9 1.1 4.2L7.5 24.5l4.4-1.1c1.2.6 2.6 1 4.1 1 4.7 0 8.5-3.8 8.5-8.5S20.7 7.5 16 7.5zm4.2 11.6c-.2.5-1 1-1.5 1.1-.4.1-.9.1-1.4-.1-.3-.1-.7-.2-1.2-.5-2.1-1-3.4-3.1-3.5-3.2-.1-.2-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.2 0 .3 0 .5.4.2.5.6 1.6.7 1.7.1.1.1.3 0 .4-.1.2-.1.3-.3.4l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.2 1.6 2 .7.7 1.5 1 1.8 1.1.3.1.5.1.6-.1.2-.2.6-.8.8-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.8-.1 1.3z"
+              fill="#fff"/>
+    </svg>
+</a>
+
+<!-- Facebook -->
+<a class="facebook-button" href="https://web.facebook.com/MisaelArden/" target="_blank" title="Visit Facebook">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#1877F2" r="16"/>
+        <path d="M21 16h-3v10h-4V16h-2v-3.5h2v-2c0-2.5 1.2-4 4-4h2.5V10H19c-.8 0-1 .3-1 1v1.5h3.2L21 16z" fill="#fff"/>
+    </svg>
+</a>
+
+
+<script>
+    document.getElementById('curyear').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('headerNav');
+        nav.style.background = window.scrollY > 60
+            ? 'rgba(10, 10, 15, 0.95)'
+            : 'rgba(10, 10, 15, 0.75)';
+    });
+</script>
+
+</body>
 </html>

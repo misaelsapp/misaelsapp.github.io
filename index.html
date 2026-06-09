@@ -1,286 +1,414 @@
 <!DOCTYPE html>
-<html>
-
-
 <html lang="en">
 
 <head>
-    <meta name="google-site-verification" content="TdzUA8fDLAA4ghYsmwMwF0VlxLRGbFFbvK5hlemlelw" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
-    <meta property="og:title" content="Misael's App" />
-    <meta property="og:description" content="Software Developer" />
-    <meta property="og:type" content="Application" />
-    <meta property="og:url" content="http://misaelsapp.github.io/" />
-    <meta property="og:image" content="https://misaelsapp.github.io/img/billboard.png" />
-
+    <meta content="TdzUA8fDLAA4ghYsmwMwF0VlxLRGbFFbvK5hlemlelw" name="google-site-verification"/>
+    <link href="img/icon.png" rel="shortcut icon" type="image/x-icon"/>
+    <meta content="Misael's App" property="og:title"/>
+    <meta content="Software Developer" property="og:description"/>
+    <meta content="Application" property="og:type"/>
+    <meta content="https://misaelsapp.github.io/" property="og:url"/>
+    <meta content="https://misaelsapp.github.io/img/billboard.png" property="og:image"/>
     <meta charset="UTF-8">
-    <meta name="description" content="Software Developer">
-    <meta name="keywords" content="Misael's App, Software Developer, App Development, Innovative Apps, Prototypes, Technology Solutions, Digital Artist, Android Launcher, Portfolio, Tech Stack, Game Development, Artificial Intelligence, Security Apps, Mobile Apps, Software Engineering, Stellar Launcher, Monster Hunter Extherium, QSIER Cashier Solution, Picasso Studio, Cleanzone Mobile Security, The Cursed Village, Unity, .NET, Kotlin, Java, PHP, jQuery, Minimalistic Design, User-Friendly Interface, Game Animation, Performance Improvement, UI Enhancements, Malware Detection, Gamers, Developers, Tech Enthusiasts, Business Owners, Creative Professionals, Innovative Software, Cutting-edge Technology, Digital Solutions, Game Development Projects, Software Development Portfolio">
-    <meta name="author" content="misael">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Misael's App</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/jquery-3.7.0.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/waypoints.min.js"></script>
+    <meta content="Software Developer" name="description">
+    <meta content="Misael's App, Software Developer, App Development, Innovative Apps, Prototypes, Technology Solutions, Digital Artist, Android Launcher, Portfolio, Tech Stack, Game Development, Artificial Intelligence, Security Apps, Mobile Apps, Software Engineering"
+          name="keywords">
+    <meta content="misael" name="author">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Misael's Lab</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 </head>
 
-
 <body>
-    <header id="headerNav">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="img/logo.png" alt="Logo">
-                </div>
-                <ul class="nav-links">
-                    <li onclick="hamburgermenu()" id="navicon"></li>
-                    <li onclick="scrollToElement('product')"><a href="#Product">PORTFOLIO</a></li>
-                    <li onclick="scrollToElement('techstack')"><a href="#techstack">TECH STACK</a></li>
-                    <li><a href="privacy.html">PRIVACY POLICY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="billboard">
-        <div class="subbillboard">
-            <div class="icon-container">
-                <i class="fas fa-arrow-left leftarrow"></i>
-            </div>
-            <div class="container">
 
-
-                <div style="flex: 1;">
-                    <div class="billboard-title">Welcome to My Lab</div>
-                    <div class="billboard-desc">
-                        Hey there! I'm Misael, a creator with a passion for pushing the boundaries of technology. I build innovative apps and prototypes that blend creativity with cutting-edge tech, focusing on security, gaming, and artificial intelligence. With a solid software development background, I thrive on turning bold ideas into reality.
-                    </div>
-                    <div class="billboard-button">
-                        <button class="button-blue" style="margin-top: 20px;width: 135px;"
-                            onclick="scrollToElement('product')">Portfolio</button>
-                    </div>
-                </div>
-                <div class="billboard-mascot" style="flex: 1;">
-                    <img src="img/mascot.png" width="450">
-                </div>
+<!-- ===== NAVBAR ===== -->
+<header id="headerNav">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img alt="Misael's Lab"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+                     src="img/logo.png">
+                <span class="logo-text" style="display:none;">MISAEL</span>
             </div>
-
-            <div class="icon-container">
-                <i class="fas fa-arrow-right rightarrow"></i>
-            </div>
-        </div>
+            <ul class="nav-links" id="navLinks">
+                <li id="navicon" onclick="toggleMenu()"></li>
+                <li onclick="scrollToSection('portfolio')"><a href="#portfolio">PORTFOLIO</a></li>
+                <li onclick="scrollToSection('techstack')"><a href="#techstack">TECH STACK</a></li>
+                <li><a href="artworks.html">ARTWORKS</a></li>
+                <li><a href="devlog.html">DEV LOG</a></li>
+                <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <div class="title" id="product">
-        <div class="container">
-            <h1>PORTFOLIO</h1>
-        </div>
-    </div>
-
-
-    <div class="waypoint container" >
-        <ul class="flex-container">
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/epochalys.png')"> </div>
-                <div class="desc">
-                    <h2>Epochalys</h2>
-                    <div>
-                        Adventure after apocalypse. Defeat creepy Alien from outspace.
-                    </div>
-                    <button class="button-blue"
-                        onclick="visit('https://misaeldevstudio.itch.io/epochalys',null,true)">itch.io</button>
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-eyebrow fade-up fade-up-1">Software Developer & Digital Artist</div>
+                <h1 class="hero-title fade-up fade-up-2">
+                    Welcome to<br>
+                    <span class="glitch" data-text="My Lab">My Lab</span>
+                </h1>
+                <p class="hero-subtitle fade-up fade-up-3">
+                    Hey there! I'm Misael, an independent developer and digital creator. I build desktop, mobile, and
+                    game applications while exploring artificial intelligence and interactive digital experiences. My
+                    goal is to transform ideas into practical, creative, and engaging products
+                <div class="hero-badges fade-up fade-up-3">
+                    <span class="badge"><span class="dot"></span>Game Dev</span>
+                    <span class="badge"><span class="dot"></span>Security</span>
+                    <span class="badge"><span class="dot"></span>Desktop</span>
+                    <span class="badge"><span class="dot"></span>Mobile</span>
                 </div>
-            </li>
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/cleanzoneDesktop.png')"> </div>
-                <div class="desc">
-                    <h2>Cleanzone Anti-virus</h2>
-                    <div>
-                        Provides robust, real-time protection for computer.
-                    </div>
-                    <button class="button-blue"
-                        onclick="visit('https://misaeldevstudio.itch.io/cleanzone-anti-virus',null,true)">itch.io</button>
+                <div class="hero-cta fade-up fade-up-4">
+                    <button class="btn-primary" onclick="scrollToSection('portfolio')">
+                        <i class="fas fa-th-large"></i> View Portfolio
+                    </button>
+                    <a class="btn-secondary" href="about.html">
+                        <i class="fas fa-user"></i> About Me
+                    </a>
                 </div>
-            </li>
-
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/StellarLauncher.png')"> </div>
-                <div class="desc">
-                    <h2>Stellar Launcher</h2>
-                    <div>
-                        Android launcher featuring a variety of anime themes and an elegant interface.
-                    </div>
-                    <button class="button-blue"
-                        onclick="visit('https://misaeldevstudio.itch.io/stellar-launcher',null,true)">itch.io</button>
-                        <button class="button-blue"
-                        onclick="visit('https://www.amazon.com/gp/product/B0DJZR3V8H',null,true)">Amazon
-                        Appstore</button>
-                </div>
-            </li>
-
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/monsterhunter.png')"> </div>
-                <div class="desc">
-                    <h2>Monster Hunter Extherium</h2>
-                    <div>
-                        Mysterious village conceals secrets waiting to be unveiled by daring adventurers.
-                    </div>
-                    <button class="button-blue"
-                        onclick="visit('https://misaeldevstudio.itch.io/monster-hunter',null,true)">itch.io</button>
-                    <button class="button-blue"
-                        onclick="visit('https://www.amazon.com/gp/product/B0DFVKQMMR',null,true)">Amazon
-                        Appstore</button>
-
-                </div>
-            </li>
-
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/qsier.png')"> </div>
-                <div class="desc">
-                    <h2>QSIER</h2>
-                    <div>
-                        Increase your business productivity. Leading Cashier Solution for a Successful Busines.
-                    </div>
-                    <button class="button-blue" onclick="visit('https://misaeldevstudio.itch.io/qsier',null,true)">itch.io</button>
-                    <button class="button-blue" onclick="visit('https://www.amazon.com/dp/B0D4YXNT2B',null,true)">Amazon
-                        Appstore</button>
-                </div>
-            </li>
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/picassostudio.png')"> </div>
-                <div class="desc">
-                    <h2>PICASSO STUDIO</h2>
-                    <div>
-                        Elevate your joyful moments with Picasso Studio's transformative touch.
-                    </div>
-                    <button class="button-blue"
-                        onclick="visit('https://www.mediafire.com/file/5umizyobbwfhffp/picassostudio.apk/file',null,true)">Mediafire</button>
-                    <button class="button-blue"
-                        onclick="visit('https://www.amazon.com/gp/product/B0CZNWSP6H',null,true)">Amazon
-                        Appstore</button>
-                </div>
-            </li>
-
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/thecursedvillage.png')">
-                    <div style="text-align: center;padding: 10px;background-color: #000000c3;color: #ff0000;">
-                        DISCONTINUED</div>
-
-                </div>
-                <div class="desc">
-                    <h2>The Cursed Village</h2>
-                    <div>
-                        The game depicting a cursed dead city inhabited by all kinds of terrible monsters.
-                    </div>
-                    <button class="button-blue" onclick="visit('https://www.amazon.com/dp/B0C6R5WMQ4',null,true)">Amazon
-                        Appstore</button>
-                </div>
-            </li>
-
-            <li class="flex-item">
-                <div class="thumbnail" style="background-image: url('img/cleanzone.png')">
-                    <div style="text-align: center;padding: 10px;background-color: #000000c3;color: #ff0000;">
-                        DISCONTINUED</div>
-
-                </div>
-                <div class="desc">
-                    <h2>Cleanzone Mobile Security</h2>
-                    <div>
-                        Cutting-edge scanning technology swiftly detects and eliminates malware.
-                    </div>
-                    <button class="button-blue" onclick="visit('https://www.amazon.com/dp/B0C5G71BWV',null,true)">Amazon
-                        Appstore</button>
-                </div>
-            </li>
-
-        </ul>
-    </div>
-
-
-    <div class="title" id="techstack">
-        <div class="container">
-            <h1>TECH STACK</h1>
-
-        </div>
-    </div>
-
-
-    <div style="background-color: #333;padding: 20px;" >
-        <div class="container">
-            <div class="divider">
-                <span>CORE TECHNOLOGIES</span>
             </div>
-            <div class="tech-logos">
-                <img src="img/unity-logo.png" alt="Unity">
-                <img src="img/dotnet-logo.png" alt=".Net" >
-                <img src="img/kotlin-logo.png" alt="Kotlin">
-                <img src="img/java-logo.png" alt="Java" >
-                <img src="img/php-logo.png" alt="Php" >
-                <img src="img/jquery-logo.png" alt="jquery" >
-                <img src="img/opencv.png" alt="openCV" >
-                <img src="img/mlkit.png" alt="ML Kit" >
-                <img src="img/coqui.png" alt="Coqui TTS" >
-                <img src="img/llama.png" alt="Llama AI Model" >
-            </div>
-    
-            <div class="divider">
-                <span>PLATFORM OUTPUT</span>
-            </div>
-            <div class="tech-logos">
-                <img src="img/windows-logo.png" alt="Windows">
-                <img src="img/macos.png" alt="macOS">
-                <img src="img/ios_logo.png" alt="macOS">
-                <img src="img/android-logo.png" alt="Android" >
-                <img src="img/browser-logo.png" alt="Web">
-            </div>
-    
-        </div>
-    </div>
-
-
-    <div class="container founder-container">
-        <div id="founder">
-            <div id="photo"></div>
-            <div id="quot">
-                <div>
-                    <div>
-                        Software is the master key to limitless knowledge, revealing hidden dimensions and unexplored worlds both here and beyond.
-                    </div>
-                    <div style="margin-top: 40px;">
-                        MISAEL
-                    </div>
-                    <div>
-                        Software Developer <br>& Digital Artist
-                    </div>
-
+            <div class="hero-right">
+                <div class="hero-mascot-wrapper">
+                    <div class="hero-ring"></div>
+                    <div class="hero-ring-2"></div>
+                    <img alt="Misael's mascot" onerror="this.style.opacity='0'" src="img/mascot.png">
                 </div>
             </div>
         </div>
-
     </div>
+</section>
+
+<!-- ===== PORTFOLIO SECTION ===== -->
+<section class="portfolio-section" id="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-eyebrow">Featured Work</div>
+            <h2 class="section-title">PORTFOLIO</h2>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <!-- Epochalys -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="Epochalys" onerror="this.parentElement.style.background='#1a1a2e'"
+                         src="img/epochalys.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-live">LIVE</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Game Development</div>
+                    <h3 class="card-title">Epochalys</h3>
+                    <p class="card-desc">2D action game built with Unity. Features wave based combat, custom enemy AI,
+                        and original sprite artwork set in a post-apocalyptic world.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="https://misaeldevstudio.itch.io/epochalys" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> itch.io
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleanzone Anti-virus Desktop -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="Cleanzone Anti-virus" onerror="this.parentElement.style.background='#1a1a2e'"
+                         src="img/cleanzoneDesktop.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-live">LIVE</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Security</div>
+                    <h3 class="card-title">Cleanzone Anti-virus</h3>
+                    <p class="card-desc">Windows antivirus application built with .NET. Combines file hash analysis and
+                        ML.NET based machine learning for realtime malware detection and classification.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="https://misaeldevstudio.itch.io/cleanzone-anti-virus"
+                           target="_blank">
+                            <i class="fas fa-external-link-alt"></i> itch.io
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stellar Launcher -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="Stellar Launcher" onerror="this.parentElement.style.background='#1a1a2e'"
+                         src="img/StellarLauncher.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-live">LIVE</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Mobile App</div>
+                    <h3 class="card-title">Stellar Launcher</h3>
+                    <p class="card-desc">Custom Android launcher built with Kotlin. Replaces the default home screen
+                        with anime themed UI packs and a minimal layout designed for daily use.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="https://misaeldevstudio.itch.io/stellar-launcher" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> itch.io
+                        </a>
+                        <a class="card-link" href="https://www.amazon.com/gp/product/B0DJZR3V8H" target="_blank">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monster Hunter -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="Monster Hunter Extherium" onerror="this.parentElement.style.background='#1a1a2e'"
+                         src="img/monsterhunter.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-live">LIVE</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Game Development</div>
+                    <h3 class="card-title">Monster Hunter Extherium</h3>
+                    <p class="card-desc">RPG adventure game built with Unity. Includes quest systems, NPC interactions,
+                        and hand-crafted level design set in a dark fantasy environment.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="https://misaeldevstudio.itch.io/monster-hunter" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> itch.io
+                        </a>
+                        <a class="card-link" href="https://www.amazon.com/gp/product/B0DFVKQMMR" target="_blank">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QSIER -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="QSIER" onerror="this.parentElement.style.background='#1a1a2e'" src="img/qsier.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-live">LIVE</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Business App</div>
+                    <h3 class="card-title">QSIER</h3>
+                    <p class="card-desc">Desktop POS application built with Kotlin. Covers transaction handling,
+                        inventory tracking, and sales reporting for small to medium businesses.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="https://misaeldevstudio.itch.io/qsier" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> itch.io
+                        </a>
+                        <a class="card-link" href="https://www.amazon.com/dp/B0D4YXNT2B" target="_blank">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Picasso Studio -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="Picasso Studio" onerror="this.parentElement.style.background='#1a1a2e'"
+                         src="img/picassostudio.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-live">LIVE</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Creative App</div>
+                    <h3 class="card-title">Picasso Studio</h3>
+                    <p class="card-desc">Android photo editing app built with Kotlin and OpenCV. Applies realtime image
+                        processing effects and creative filters directly on device.</p>
+                    <div class="card-links">
+                        <a class="card-link"
+                           href="https://www.mediafire.com/file/5umizyobbwfhffp/picassostudio.apk/file" target="_blank">
+                            <i class="fas fa-download"></i> Mediafire
+                        </a>
+                        <a class="card-link" href="https://www.amazon.com/gp/product/B0CZNWSP6H" target="_blank">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Cursed Village (discontinued) -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="The Cursed Village" onerror="this.parentElement.style.background='#1a1a2e'"
+                         src="img/thecursedvillage.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-discontinued">DISCONTINUED</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Game Development</div>
+                    <h3 class="card-title">The Cursed Village</h3>
+                    <p class="card-desc">Early horror-themed game project built with Unity. Explored atmospheric level
+                        design and enemy behavior scripting. Discontinued as a learning stepping stone.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="https://www.amazon.com/dp/B0C6R5WMQ4" target="_blank">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleanzone Mobile (discontinued) -->
+            <div class="portfolio-card">
+                <div class="card-thumb">
+                    <img alt="Cleanzone Mobile Security" onerror="this.parentElement.style.background='#1a1a2e'"
+                         src="img/cleanzone.png">
+                    <div class="card-thumb-overlay"></div>
+                    <span class="card-status status-discontinued">DISCONTINUED</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-category">Security · Mobile</div>
+                    <h3 class="card-title">Cleanzone Mobile Security</h3>
+                    <p class="card-desc">Android security app built with Kotlin. Uses file hash analysis to detect known
+                        malware signatures. Discontinued, evolved into the desktop version.</p>
+                    <div class="card-links">
+                        <a class="card-link" href="https://www.amazon.com/dp/B0C5G71BWV" target="_blank">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== TECH STACK SECTION ===== -->
+<section class="techstack-section" id="techstack">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-eyebrow">Tools & Technologies</div>
+            <h2 class="section-title">TECH <span>STACK</span></h2>
+        </div>
+
+        <div class="tech-group-label">Core Technologies</div>
+        <div class="tech-logos">
+            <div class="tech-chip"><img alt="Unity" src="img/unity.svg"><span>Unity</span></div>
+            <div class="tech-chip"><img alt=".NET" src="img/dotnet.svg"><span>.NET</span></div>
+            <div class="tech-chip"><img alt="Kotlin" src="img/kotlin.svg"><span>Kotlin</span></div>
+            <div class="tech-chip"><img alt="Java" src="img/java.svg"><span>Java</span></div>
+            <div class="tech-chip"><img alt="PHP" src="img/php.svg"><span>PHP</span></div>
+            <div class="tech-chip"><img alt="jQuery" src="img/jquery.svg"><span>jQuery</span></div>
+            <div class="tech-chip"><img alt="OpenCV" src="img/opencv.svg"><span>OpenCV</span></div>
+            <div class="tech-chip"><img alt="ML Kit" src="img/mlkit.png"><span>ML Kit</span></div>
+            <div class="tech-chip"><img alt="Coqui TTS" src="img/coquitts.png"><span>Coqui TTS</span></div>
+            <div class="tech-chip"><img alt="Llama" src="img/llama.png"><span>Llama</span></div>
+            <div class="tech-chip"><img alt="Ml.Net" src="img/mldotnet.svg"><span>ML.NET</span></div>
+        </div>
+
+        <div class="tech-group-label">Creative & Design Tools</div>
+        <div class="tech-logos">
+            <div class="tech-chip"><img alt="CorelDRAW" src="img/coreldraw.png"><span>CorelDRAW</span></div>
+            <div class="tech-chip"><img alt="Clip Studio Paint" src="img/csp.png"><span>Clip Studio Paint</span></div>
+            <div class="tech-chip"><img alt="3ds Max" src="img/3dmax.png"><span>3ds Max</span></div>
+            <div class="tech-chip"><img alt="Adobe Substance" src="img/Substance.svg"><span>Substance 3D</span></div>
+        </div>
+
+        <div class="tech-group-label">Platform Output</div>
+        <div class="tech-logos platform-chips">
+            <div class="tech-chip"><img alt="Windows" src="img/windows.svg"><span>Windows</span></div>
+            <div class="tech-chip"><img alt="Android" src="img/android.svg"><span>Android</span></div>
+            <div class="tech-chip"><img alt="Web" src="img/web.svg"><span>Web</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="quote-section">
+    <div class="container">
+        <div class="quote-card">
+
+            <div class="quote-avatar">
+                <img alt="Misael" src="img/dev.jpg">
+            </div>
+
+            <div class="quote-body">
+                <span class="quote-mark">"</span>
+
+                <p class="quote-text">
+                    Technology and creativity are not separate disciplines. The best products emerge when software, art,
+                    and innovation work together.
+                </p>
+
+                <div class="quote-author">MISAEL</div>
+                <div class="quote-role">
+                    Software Developer • AI Enthusiast • Digital Artist
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp -->
+<a class="whatsapp-button" href="https://wa.me/6281269948582" target="_blank" title="Chat on WhatsApp">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#25D366" r="16"/>
+        <path d="M16 7.5C11.3 7.5 7.5 11.3 7.5 16c0 1.5.4 2.9 1.1 4.2L7.5 24.5l4.4-1.1c1.2.6 2.6 1 4.1 1 4.7 0 8.5-3.8 8.5-8.5S20.7 7.5 16 7.5zm4.2 11.6c-.2.5-1 1-1.5 1.1-.4.1-.9.1-1.4-.1-.3-.1-.7-.2-1.2-.5-2.1-1-3.4-3.1-3.5-3.2-.1-.2-.9-1.2-.9-2.3s.6-1.6.8-1.9c.2-.2.4-.3.6-.3h.4c.2 0 .3 0 .5.4.2.5.6 1.6.7 1.7.1.1.1.3 0 .4-.1.2-.1.3-.3.4l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.2 1.6 2 .7.7 1.5 1 1.8 1.1.3.1.5.1.6-.1.2-.2.6-.8.8-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.4.1.2.1.8-.1 1.3z"
+              fill="#fff"/>
+    </svg>
+</a>
+
+<!-- Facebook -->
+<a class="facebook-button" href="https://web.facebook.com/MisaelArden/" target="_blank" title="Visit Facebook">
+    <svg height="28" viewBox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" fill="#1877F2" r="16"/>
+        <path d="M21 16h-3v10h-4V16h-2v-3.5h2v-2c0-2.5 1.2-4 4-4h2.5V10H19c-.8 0-1 .3-1 1v1.5h3.2L21 16z" fill="#fff"/>
+    </svg>
+</a>
 
 
-    <a href="https://wa.me/6281269948582" class="whatsapp-button" target="_blank">
-        <img src="img/wa.png" alt="WhatsApp" />
-    </a>
-</body>
-
-
-<footer class="font-white-color">
-    <p>
-        Copyright &copy; <span id="curyear">2023</span> Misael's App. All Right Reserved.
-
-    </p>
+<footer>
+    <p>Copyright &copy; <span id="curyear"></span> Misael's Lab. All Rights Reserved.</p>
 </footer>
 
+<script>
+    document.getElementById('curyear').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({behavior: 'smooth', block: 'start'});
+            document.getElementById('navLinks').classList.remove('open');
+        }
+    }
+
+    // Navbar shrink on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('headerNav');
+        nav.style.background = window.scrollY > 60
+            ? 'rgba(10, 10, 15, 0.95)'
+            : 'rgba(10, 10, 15, 0.75)';
+    });
+
+    // Fade-in on scroll for cards
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {threshold: 0.1});
+
+    document.querySelectorAll('.portfolio-card, .tech-chip, .quote-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+        observer.observe(el);
+    });
+</script>
+
+</body>
 </html>
