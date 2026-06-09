@@ -1,9 +1,8 @@
-<color=#C6D141><size=16>Update 2.0</size>
+<color=#C6D141><size=16>In Progress 2.0</size>
 <size=12>+ Changed URP to HDRP</size>
 <size=12>+ No more true damage from tower and drone </size>
-<size=12>+ Damage Calcualtion imporvement </size>
+<size=12>+ Damage calculation improvement</size>
 <size=12>+ Increase texutre for some objects </size>
-<size=12>+ No more extra slot from backpack</size>
 
 <color=#C6D141><size=16>Update 1.0</size>
 <size=12>+ Official Release</size>
@@ -13,4 +12,4 @@ This update marks the initial release, with more improvements already in develop
 
 Stay tuned, this is just the beginning.
 
-- Misael (Developer)</size></color>
+Misael (Developer)</size></color>
