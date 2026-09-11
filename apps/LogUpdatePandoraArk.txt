@@ -1,9 +1,3 @@
-<color=#C6D141><size=16>Update 2.0</size>
-<size=12>+ Changed URP to HDRP</size>
-<size=12>+ No more true damage from tower and drone </size>
-<size=12>+ Damage calculation improvement</size>
-<size=12>+ Increase texutre for some objects </size>
-
 <color=#C6D141><size=16>Update 1.0</size>
 <size=12>+ Official Release</size>
 
