@@ -1,9 +1,21 @@
-<color=#C6D141><size=16>Update 1.0</size>
-<size=12>+ Official Release</size>
+<color=#C6D141>
+<size=16>Update 1.1</size>
+<size=12>
++ Added weapon draw and sheathe animations
++ Added a dodge roll mechanic to evade damage
++ Added muzzle flash and shell casing ejection VFX
++ Improved overall performance and FPS
++ Fixed minor bugs
++ Updated game engine (Unity 6.3 to 6.4)
+</size>
 
-<size=12>Thank you for all the support and valuable feedback.  
-This update marks the initial release, with more improvements already in development.
+<size=16>Update 1.0</size>
+<size=12>
++ Official Release
 
-Stay tuned, this is just the beginning.
+Thank you for playing and for all your valuable feedback!
+More improvements and updates are already in development.
 
-Misael (Developer)</size></color>
+Misael (Developer)
+</size>
+</color>
